@@ -1,7 +1,15 @@
 /* Banner Section Style */
 .banner{
-    padding-top: toRem(100);
-    padding-bottom: toRem(100);
+    --_gap: #{toRem(40)};
+    @include min-md{
+        --_gap: #{toRem(60)};
+    }
+    @include min-lg{
+        --_gap: #{toRem(80)};
+    }
+
+    padding-top: var( --_gap);
+    padding-bottom: var( --_gap);
 
     &__title{
         font-size: toRem(35);
@@ -12,7 +20,7 @@
             font-size: toRem(60);
         }
 
-        font-weight: 700;
+        @extend %fw-extrabold;
         margin-bottom: toRem(20);
     }
 

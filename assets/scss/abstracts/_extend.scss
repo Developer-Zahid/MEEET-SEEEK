@@ -1,5 +1,5 @@
 %transition{
-    transition: all ease-in-out .25s;
+    transition: all $transition-ease .25s;
 }
 
 %stacking-context{
@@ -86,6 +86,14 @@
 
 %fw-bold{
     font-weight: 700;
+}
+
+%fw-extrabold{
+    font-weight: 800;
+}
+
+%fw-black{
+    font-weight: 900;
 }
 
 %custom-scrollbar{

@@ -11,7 +11,7 @@ Author Website:     https://developer-zahid-portfolio.netlify.app/
 Author Email: 	    dgtaltechzahidhasan@gmail.com
 ---------------------------------------------------------------------
 */
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
 :root {
   --color-primary: #34CFCB;
   --color-primary-rgb: 52, 207, 203;
@@ -245,6 +245,10 @@ p {
 
 .banner__text {
   font-weight: 600;
+}
+
+.banner__title {
+  font-weight: 800;
 }
 
 html {
@@ -522,7 +526,66 @@ html::-webkit-scrollbar-thumb {
 
 /* CTA card Style */
 .cta-card {
-  padding: 1.875rem;
+  padding: 2.5rem 1.25rem;
+}
+@media (min-width: 576px) {
+  .cta-card {
+    padding-top: 3.75rem;
+  }
+}
+@media (min-width: 1200px) {
+  .cta-card {
+    padding-top: 5rem;
+  }
+}
+.cta-card__image {
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition: -webkit-transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  -o-transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), -webkit-transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+@media (min-width: 768px) {
+  .cta-card__image {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%) scale(1);
+        -ms-transform: translate(-50%, -50%) scale(1);
+            transform: translate(-50%, -50%) scale(1);
+  }
+}
+@media (max-width: 1199.98px) {
+  .cta-card__image {
+    max-height: 5rem;
+  }
+}
+@media (max-width: 767.98px) {
+  .cta-card__image {
+    margin-bottom: 0.9375rem;
+  }
+}
+@media (max-width: 1199.98px) {
+  .cta-card__title {
+    font-size: 1.375rem;
+  }
+}
+@media (min-width: 992px) {
+  .cta-card__text {
+    max-width: 50%;
+  }
+}
+@media (max-width: 1199.98px) {
+  .cta-card__text {
+    font-size: 1rem;
+  }
+}
+@media (hover: hover) and (min-width: 768px) {
+  .cta-card:hover .cta-card__image, .cta-card:focus-visible .cta-card__image {
+    -webkit-transform: translate(-50%, -50%) scale(1.2);
+        -ms-transform: translate(-50%, -50%) scale(1.2);
+            transform: translate(-50%, -50%) scale(1.2);
+  }
 }
 
 .nav-pills {
@@ -955,12 +1018,22 @@ html::-webkit-scrollbar-thumb {
 
 /* Banner Section Style */
 .banner {
-  padding-top: 6.25rem;
-  padding-bottom: 6.25rem;
+  --_gap: 2.5rem;
+  padding-top: var(--_gap);
+  padding-bottom: var(--_gap);
+}
+@media (min-width: 768px) {
+  .banner {
+    --_gap: 3.75rem;
+  }
+}
+@media (min-width: 992px) {
+  .banner {
+    --_gap: 5rem;
+  }
 }
 .banner__title {
   font-size: 2.1875rem;
-  font-weight: 700;
   margin-bottom: 1.25rem;
 }
 @media (min-width: 576px) {
