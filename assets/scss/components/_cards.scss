@@ -105,6 +105,7 @@
     }
 }
 
+/* Feature Card Style */
 .feature-card{
     --_size: #{toRem(100)};
     @include min-md{
@@ -133,6 +134,7 @@
     }
 }
 
+/* Step Card Style */
 .step-card{
     margin-bottom: $gutter;
     

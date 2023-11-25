@@ -39,32 +39,6 @@
     }
 }
 
-[data-bs-toggle="collapse"]{
-	position: relative;
-
-	&::before,
-	&::after
-	{
-		@extend %common-pseudo;
-		top: 50%;
-		right: 5px;
-		width: toRem(15);
-		height: 2px;
-		background-color: $color-white;
-		transition: opacity .25s $transition-ease;
-	}
-	&::before{
-		transform: translateY(-50%);
-	}
-	&::after{
-		transform: translateY(-50%) rotate(90deg);
-	}
-
-	&[aria-expanded="true"]::after{
-		opacity: 0;
-	}
-}
-
 .circle-number{
 	@extend %rounded-circle;
 	display: inline-flex;
