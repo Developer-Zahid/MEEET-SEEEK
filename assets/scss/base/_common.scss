@@ -70,21 +70,18 @@ p{
 	@include min-md{
 		font-size: toRem(16);
 	}
+	@include min-lg{
+		font-size: toRem(18);
+	}
 }
 
 :is(p, h1, h2, h3, h4, h5, h6) a{
-	text-decoration: underline $color-primary--dark !important;
+	text-decoration: underline !important;
 }
 
 .preloader{
 	z-index: 99999;
 }
-
-// @include min-xxl {
-// 	.container{
-// 		max-width: toRem(1240)
-// 	}
-// }
 
 .user-select-none{
 	pointer-events: none;
@@ -106,13 +103,12 @@ p{
 /* Common Section Heading Style */
 .section-header{
 	&__title{
-		font-size: toRem(30);
+		font-size: toRem(26);
 		@include min-md{
-			font-size: toRem(45);
+			font-size: toRem(30);
 		}
-		@include min-lg{
-			font-size: toRem(62);
-		}
+
+		@extend %fw-bold;
 		margin-bottom: toRem(40);
 	}
 }
@@ -177,6 +173,10 @@ p{
 .bg-secondary
 {
 	--bs-secondary-rgb: #{$color-secondary-rgb};
+}
+
+.bg-secondary{
+	--bs-bg-opacity: 0.5;
 }
 
 .simplebar{

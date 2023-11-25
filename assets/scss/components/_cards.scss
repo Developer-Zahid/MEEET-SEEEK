@@ -1,4 +1,4 @@
-/* CTA card Style */
+/* CTA Card Style */
 .cta-card{
     padding: toRem(40) toRem(20);
     @include min-sm{
@@ -51,4 +51,100 @@
         }
     }
 
+}
+
+/* Plan Card Style */
+.plan-card{
+    position: relative;
+    display: block;
+    background-color: $color-white;
+    margin-bottom: $gutter;
+
+    &__header,
+    &__body
+    {
+        border: 2px solid var(--_theme, #{$color-primary--dark});
+        padding: toRem(25) toRem(15);
+    }
+
+    &--lg{
+        .plan-card__body{
+            padding-top: toRem(32);
+            padding-bottom: toRem(32);
+        }
+    }
+
+    &__header{
+        border-bottom: 0;
+        background-color: var(--_theme, #{$color-primary--dark});
+
+
+        &__title{
+            font-size: toRem(32);
+            @extend %fw-bold;
+        }
+
+        &__text{
+            font-size: toRem(18);
+        }
+    }
+
+    &__body{
+        &__title{
+            font-size: toRem(44);
+            @extend %fw-extrabold;
+        }
+
+        &__text{
+            font-size: toRem(18);
+        }
+
+        &__sub-title{
+            @extend %fw-medium;
+        }
+    }
+}
+
+.feature-card{
+    --_size: #{toRem(100)};
+    @include min-md{
+        --_size: #{toRem(124)};
+    }
+
+    position: relative;
+    background-color: var(--_theme, #{$color-primary--dark});
+    padding: toRem(25);
+    padding-top: calc(var(--_size) / 1.5);
+    margin-top: calc((var(--_size) / 2) + $gutter);
+
+    &__figure{
+        width: var(--_size);
+        height: var(--_size);
+        position: absolute;
+        left: 50%;
+        top: 0;
+        transform: translate(-50%, -50%);
+        border: 4px solid var(--_theme, #{$color-primary--dark});
+        @extend %select-none;
+
+        &__bg{
+            @extend %full-width;
+        }
+    }
+}
+
+.step-card{
+    margin-bottom: $gutter;
+    
+    &__count{
+        --_size: #{toRem(55)};
+
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        width: var(--_size);
+        height: var(--_size);
+        font-size: toRem(28);
+    }
 }

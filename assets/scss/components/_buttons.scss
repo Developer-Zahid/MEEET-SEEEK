@@ -3,12 +3,10 @@
 	--bs-btn-padding-y: #{toRem(10)};
 	--bs-btn-padding-x: #{toRem(25)};
 	--bs-btn-font-size: #{toRem(14)};
-	--bs-border-radius: #{toRem(8)};
 	@include min-md{
 		--bs-btn-padding-y: #{toRem(15)};
 		--bs-btn-padding-x: #{toRem(30)};
 		--bs-btn-font-size: #{toRem(18)};
-		--bs-border-radius: #{toRem(15)};
 	}
 	--bs-btn-font-family: #{$font-primary};
 	--bs-btn-font-weight: 600;
@@ -83,51 +81,13 @@
 	}
 }
 
-.back-btn{
-	display: inline-flex;
-	align-items: center;
-	background-color: transparent;
-	border: 0;
-	gap: toRem(6);
-	@include min-sm{
-		font-size: toRem(20);
-	}
-}
-
-.favorite-btn,
-.icon-btn
-{
-	&:not(.active) &__icon{
-		fill: transparent;
-	}
-}
-
-.favorite-btn{
-	--_size: #{toRem(40)};
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	width: var(--_size);
-	height: var(--_size);
-	font-size: toRem(18);
-	padding: 5px;
-	@extend %rounded-circle;
-	background-color: rgba($color-white, $alpha: 0.5);
-	border: 0;
-	color: $color-primary;
-	backdrop-filter: blur(toRem(25));
-	@include min-md{
-		--_size: #{toRem(50)};
-		font-size: toRem(22);
-	}
-}
 
 .icon-btn{
 	color: $color-black;
 	background-color: transparent;
 	font-size: toRem(25);
 	border: 0;
-	padding: 3px;
+	padding: 3px 1px;
 	line-height: 0;
 	
 	&--sm{
@@ -139,17 +99,15 @@
 	display: inline-flex;
 	align-items: center;
 	font-size: toRem(16);
+	@include min-md{
+		font-size: toRem(18);
+	}
 	padding: 5px;
 	background-color: transparent;
 	border: 0;
 	line-height: 1;
+	text-decoration: underline;
 	@extend %fw-medium;
-
-	&:is(.active) &__before,
-    &:not(.active) &__after
-    {
-        display: none;
-    }
 }
 
 .scroll-top{
