@@ -12,6 +12,10 @@
 	--bs-btn-font-weight: 600;
 	--bs-btn-line-height: 1;
 	box-shadow: none !important;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: toRem(10);
 
 	&-sm{
 		--bs-btn-padding-y: #{toRem(10)};

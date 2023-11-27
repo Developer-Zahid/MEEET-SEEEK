@@ -54,13 +54,8 @@ button:active
 	outline: none;
 }
 
-img,
-svg
-{
-	display: block;
-}
-
 img{
+	display: block;
 	object-fit: cover;
 	max-width: 100%;
 }

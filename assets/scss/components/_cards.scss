@@ -55,6 +55,7 @@
 
 /* Plan Card Style */
 .plan-card{
+    --_color-plan: var(--_theme, #{$color-primary--dark});
     position: relative;
     display: block;
     background-color: $color-white;
@@ -63,7 +64,7 @@
     &__header,
     &__body
     {
-        border: 2px solid var(--_theme, #{$color-primary--dark});
+        border: 2px solid var(--_color-plan);
         padding: toRem(25) toRem(15);
     }
 
@@ -76,7 +77,11 @@
 
     &__header{
         border-bottom: 0;
-        background-color: var(--_theme, #{$color-primary--dark});
+        background-color: var(--_color-plan);
+
+        &--shadow{
+            box-shadow: 0 toRem(100) 0 var(--_color-plan);
+        }
 
 
         &__title{
@@ -101,6 +106,27 @@
 
         &__sub-title{
             @extend %fw-medium;
+        }
+
+        &__list{
+            font-size: toRem(18);
+
+            &__item{
+                position: relative;
+                margin-top: toRem(15);
+                padding-left: toRem(20);
+
+                &::before{
+                    @extend %common-pseudo;
+                    @extend %rounded-circle;
+                    width: 8px;
+                    height: 8px;
+                    top: 50%;
+                    left: 0;
+                    transform: translateY(-50%);
+                    background-color: var(--_color-plan);
+                }
+            }
         }
     }
 }
