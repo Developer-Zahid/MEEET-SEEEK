@@ -1033,6 +1033,11 @@ html::-webkit-scrollbar-thumb {
           transform: translateY(0) rotate(45deg);
 }
 
+@media (max-width: 991.98px) {
+  .navbar__nav__item:not(:has(.navbar__nav__dropdown-menu)) .navbar__nav__link::before, .navbar__nav__item:not(:has(.navbar__nav__dropdown-menu)) .navbar__nav__link::after {
+    display: none;
+  }
+}
 .footer__logo {
   max-height: 3.125rem;
 }

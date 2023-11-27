@@ -280,3 +280,13 @@
 		}
 	}
 }
+
+@include max-md{
+	.navbar__nav__item:not(:has( .navbar__nav__dropdown-menu)) .navbar__nav__link{
+		&::before,
+		&::after
+		{
+			display: none;
+		}
+	}
+}
